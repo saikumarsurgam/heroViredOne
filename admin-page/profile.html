@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Admin :: Profile</title>
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/charankesireddy/image/upload/v1648965624/E%20commerce%20COZA%20STORE/pin_vyujos.png"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+    />
+    <!-- https://fonts.google.com/specimen/Roboto -->
+    <link rel="stylesheet" href="admin styles/css/fontawesome.min.css" />
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="admin styles/css/bootstrap.min.css" />
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="admin styles/css/templatemo-style.css">
+
+    <link href="admin styles/css/profile.css" rel="stylesheet" type="text/css" />
+    
+  </head>
+
+  <body id="reportsPage">
+    <div class="" id="home">
+      <nav class="navbar navbar-expand-xl">
+        <div class="container h-100">
+          <a class="navbar-brand" href="admin">
+            <h1 class="tm-site-title mb-0">COZA STORE</h1>
+          </a>
+          <button
+            class="navbar-toggler ml-auto mr-0"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars tm-nav-icon"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto h-100">
+              <li class="nav-item">
+                <a class="nav-link" href="admin">
+                  <i class="fas fa-tachometer-alt"></i> Dashboard
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="reports">
+                    <i class="fas fa-tachometer-alt"></i>
+                    Reports
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="products">
+                  <i class="fas fa-shopping-cart"></i> Products
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="accounts">
+                  <i class="far fa-user"></i> Accounts
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-cog"></i>
+                  <span> Settings <i class="fas fa-angle-down"></i> </span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a href=""></a><a class="dropdown-item" href="products">Profile</a>
+                  <!-- <a class="dropdown-item" href="#">Billing</a>
+                  <a class="dropdown-item" href="#">Customize</a> -->
+                </div>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link d-block" href="login">
+                  Admin, <b>Logout</b>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <body>
+
+        <!-- 	<table>
+                <tr>
+                    <td id="branding">shipyard</td>
+                    <td>home</td> -->
+                    <!-- <td>about us</td> -->
+                    <!-- <td>contact</td> -->
+        <!-- 			<td>my account</td>	 -->
+                    <!-- <td>my orders</td>	 -->
+                    <!-- <td>cart</td> -->
+        <!-- 			<td id="inputwala"><input type="text" name=""></td>
+                    <td><a href="#">search</a></td>
+                    <td style="float: right;"><a href="#">signout</a></td> -->
+                    <!-- <td><input type="button" name="signout" value="signout"></td> -->
+        <!-- 		</tr>
+            </table> -->
+        
+            <div id="admin_information">
+        
+                <div id="admin_image">
+                    <img src="">
+                </div>	
+        
+                <div id="admin_details">
+                <label>name</label>
+                <input type="text" name="name">
+        
+                <label>address</label>
+                <input type="text" name="address">
+        
+                <label>email</label>
+                <input type="email" name="email">
+        
+                <label>contact</label>
+                <input type="text" name="mobile" pattern="[789][0-9]{9}"  required>	
+                </div>
+                
+            </div>
+        
+            <div id="admin_controls">
+                <input type="file" name="pic" accept="image/*" style="float: left;">
+                <button style="float: right;">save</button>
+            </div>
+            
+        
+        </body>
+    </div>
+    <!-- <div> 
+      <footer class="tm-footer row tm-mt-small">
+        <div class="col-12 font-weight-light">
+          <center><p style="color: whitesmoke;">CopyRight @ Batch-5</p></center>
+        </div>
+      </footer>
+    </div> -->
+
+    <script src="admin styles/js/jquery-3.3.1.min.js"></script>
+    <!-- https://jquery.com/download/ -->
+    <script src="admin styles/js/bootstrap.min.js"></script>
+    <!-- https://getbootstrap.com/ -->
+  </body>
+</html>

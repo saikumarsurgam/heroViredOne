@@ -1,0 +1,20 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "group5",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "mongodb": "^4.4.1",
+    "mongoose": "^6.3.0",
+    "monk": "^7.3.4",
+    "node": "^17.7.1",
+    "path": "^0.12.7"
+  }
+}

@@ -1,0 +1,147 @@
+<!-- <!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Sign up / Login Form</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body> -->
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign up / Login Form</title>
+	<link rel="icon" type="image/png" href="https://res.cloudinary.com/charankesireddy/image/upload/v1648965624/E%20commerce%20COZA%20STORE/pin_vyujos.png"/>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body class="sl-body">
+	<div class="sl-main">  	
+		<input type="checkbox" id="chk" aria-hidden="true" class="sl-input">
+
+			<div class="sl-signup">
+				<form>
+					<label for="chk" aria-hidden="true" class="sl-label">Sign up</label>
+					<input type="text" name="txt" placeholder="User name" required="" id="username" class="sl-input">
+					<input type="email" name="email" placeholder="Email" required="" id="email" class="sl-input"> 
+					<input type="password" name="pswd" placeholder="Password" required="" id="password" class="sl-input">
+					<!-- <button type="button" onclick="insertdata()" class="btn btn-primary mr-2" >Submit</button> -->
+                      <!-- <button class="btn btn-dark">Cancel</button> -->
+					<button class="sl-button" onclick="validation()" type="button">Sign up</button>
+				</form>
+			</div>
+
+			<div class="sl-login">
+				<form>
+					<label for="chk" aria-hidden="true" class="sl-label">Login</label>
+					<input type="email" name="email" placeholder="Email" required=""  id="email_login" class="sl-input">
+					<input type="password" name="pswd" placeholder="Password" required="" id="password_login" class="sl-input">
+					<button class="sl-button" type="button" onclick="insertdata()" >Login</button>
+				</form>
+			</div>
+	</div>
+	<script>
+		function validation(){
+			var user_name=document.getElementById("username").value;
+			var email=document.getElementById("email").value;
+		    var password=document.getElementById("password").value;
+
+		if(user_name.length<=0 && email.length<=0 && password.length<=0){
+			alert("Enter all Fields")
+		}
+		else if(user_name.length<=0){
+          // alert("username is required");
+        //   document.getElementById("message1").innerHTML="!Please enter a username"
+        //   user_name.focus();
+		window.alert("Enter Username")
+          
+        }
+        else if(email.length<=0){
+        //   document.getElementById("message2").innerHTML="!Please enter mobilenumber"
+        //   number.focus();
+		alert("Enter E-mail")
+         
+        }
+        else if(password.length<=0){
+        //   document.getElementById("message3").innerHTML="!Please enter a valid mail"
+        //   mail.focus();
+		alert("Enter Password")
+        }
+		if(user_name.length !=0 && email.length !=0 && password.length !=0 ){
+			var data={
+				name : user_name,
+				mail:email,
+				password:password
+			}
+			console.log(data)
+			
+			fetch('/sendData', {
+            method:'post',
+            headers: {
+              'Content-Type' : 'application/json'
+            },
+            body: JSON.stringify(data)
+          })
+          .then(response => response.json())
+          .then(data => {
+            console.log(data)
+			
+          })
+          .catch((error)=>{
+            alert("Mail ID already exists")
+          })
+		}
+		
+		}
+		
+		   
+		
+
+	
+	  function insertdata(){
+		//   var user_name=document.getElementById("username").value;
+		  var email=document.getElementById("email_login").value;
+		  var password=document.getElementById("password_login").value;
+		  console.log(email)
+		  if(email.length<=0){
+			  alert('Enter E-mail')
+		  }
+		  else if(password.length<=0){
+			  alert('Enter Password')
+		  }
+		//   else if(password.length<=0){
+		// 	  alert('Enter Password')
+		//   }
+		  if(email.length!=0 &&  password.length!=0 ){
+			  var data={
+				   mail_id:email,
+				password:password}
+				  console.log(data)
+		  }
+		  fetch('/logindata',{
+          method:'post',
+          headers: {
+            'Content-Type' : 'application/json'
+          },
+          body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data)
+          window.location.href="/shoping-cart"
+        })
+        .catch((error)=>{
+            alert("Enter Valid Details")
+          })
+	  }
+      
+	</script>
+</body>
+
+</html>
+<!-- partial -->
+<!--   
+</body>
+</html> -->
+
